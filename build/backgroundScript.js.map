@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../src/messagesService.ts", "../src/backgroundScript.ts"],
-  "sourcesContent": ["export enum MESSAGE {\n  PAGE_LOADED = \"PAGE_LOADED\",\n}\n", "import { MESSAGE } from './messagesService';\n\n(function startBackgroundScript(): void {\n  chrome.runtime.onMessage.addListener(({ message }, sender) => {\n    if (!sender.tab?.id) {\n      return false;\n    }\n\n    if (message === MESSAGE.PAGE_LOADED) {\n      chrome.scripting.executeScript({\n        target: { tabId: sender.tab.id },\n        files: ['./traversingService.js'],\n      });\n    }\n    return true;\n  });\n})();\n"],
-  "mappings": ";AAAO,IAAK;AAAL,UAAK,UAAL;AACL,4BAAc;AAAA,GADJ;;;ACEZ,AAAC,kCAAuC;AACtC,SAAO,QAAQ,UAAU,YAAY,CAAC,EAAE,WAAW,WAAW;AAHhE;AAII,QAAI,CAAC,cAAO,QAAP,mBAAY,KAAI;AACnB,aAAO;AAAA;AAGT,QAAI,YAAY,QAAQ,aAAa;AACnC,aAAO,UAAU,cAAc;AAAA,QAC7B,QAAQ,EAAE,OAAO,OAAO,IAAI;AAAA,QAC5B,OAAO,CAAC;AAAA;AAAA;AAGZ,WAAO;AAAA;AAAA;",
-  "names": []
-}

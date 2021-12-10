@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../src/treeWalker/traversingService.ts"],
-  "sourcesContent": ["function getTextNodes(node: Node): number {\n  console.warn(node);\n\n  if (node) {\n    return NodeFilter.FILTER_ACCEPT;\n  }\n  return NodeFilter.FILTER_REJECT;\n}\n\nfunction initializeScript(): void {\n  console.warn('hello');\n\n  const root = document.body;\n  const whatToShow = NodeFilter.SHOW_TEXT;\n\n  document.createTreeWalker(root, whatToShow, {\n    acceptNode: getTextNodes,\n  });\n}\ninitializeScript();\n\nexport {};\n"],
-  "mappings": ";AAAA,sBAAsB,MAAoB;AACxC,UAAQ,KAAK;AAEb,MAAI,MAAM;AACR,WAAO,WAAW;AAAA;AAEpB,SAAO,WAAW;AAAA;AAGpB,4BAAkC;AAChC,UAAQ,KAAK;AAEb,QAAM,OAAO,SAAS;AACtB,QAAM,aAAa,WAAW;AAE9B,WAAS,iBAAiB,MAAM,YAAY;AAAA,IAC1C,YAAY;AAAA;AAAA;AAGhB;",
-  "names": []
-}
