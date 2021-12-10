@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../src/messagesService.ts", "../src/contentScript.ts"],
+  "sourcesContent": ["export enum MESSAGE {\n  PAGE_LOADED = \"PAGE_LOADED\",\n}\n", "import { MESSAGE } from './messagesService';\n\n(function sendMessageFromTab(): void {\n  chrome.runtime.sendMessage({ message: MESSAGE.PAGE_LOADED });\n})();\n"],
+  "mappings": ";;AAAO,MAAK;AAAL,YAAK,UAAL;AACL,8BAAc;AAAA,KADJ;;;ACEZ,EAAC,+BAAoC;AACnC,WAAO,QAAQ,YAAY,EAAE,SAAS,QAAQ;AAAA;",
+  "names": []
+}

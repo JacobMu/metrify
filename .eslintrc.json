@@ -1,0 +1,29 @@
+{
+  "env": {
+    "es2021": true,
+    "webextensions": true,
+    "node": true,
+    "browser": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "plugins": ["@typescript-eslint"],
+  "rules": {
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": "error",
+    "node/no-path-concat": "off",
+    "no-return-await": "warn",
+    "no-useless-return": "warn",
+    "@typescript-eslint/explicit-function-return-type": "warn"
+  },
+  "ignorePatterns": ["build/"]
+}

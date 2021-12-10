@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Metrify",
+  "version": "0.1",
+  "description": "Blazing tool fo conversion to metric units",
+  "background": {
+    "service_worker": "backgroundScript.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["contentScript.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "permissions": ["activeTab", "scripting", "tabs"],
+  "host_permissions": ["<all_urls>"]
+}

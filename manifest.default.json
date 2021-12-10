@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Metrify",
+  "version": "0.1",
+  "default_locale": "en",
+  "description": "Blazing tool fo conversion to metric units",
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": {
+    "matches": ["<all_urls>"],
+    "js": ["contentScript.js"],
+    "run_at": "document_idle"
+  },
+  "permissions": ["activeTab", "scripting"]
+}
